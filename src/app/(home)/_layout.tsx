@@ -12,7 +12,7 @@ export default function RootLayout() {
     }}>
       <Stack.Screen name="index" options={{ title: 'Solicitações' }} />
       <Stack.Screen name="details/[id]" options={{ title: 'Detalhes' }} />
-      <Stack.Screen name="+not-found" />
+      <Stack.Screen name="+not-found" options={{ title: 'Oops!' }}/>
     </Stack>
   );
 }

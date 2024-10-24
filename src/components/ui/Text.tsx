@@ -1,22 +1,23 @@
 import { Text as RNText, type TextProps as RNTextProps, StyleSheet } from 'react-native';
 
 export type TextProps = RNTextProps & {
-  variant?: 'default' | 'title' | 'defaultSemiBold' | 'subtitle';
+  variant?: 'textDefault' | 'title' | 'textMedium' | 'textBold' | 'link';
 };
 
 export function Text({
   style,
-  variant = 'default',
+  variant = 'textDefault',
   ...rest
 }: TextProps) {
 
   return (
     <RNText
       style={[
-        variant === 'default' ? styles.default : undefined,
+        variant === 'textDefault' ? styles.textDefault : undefined,
+        variant === 'textMedium' ? styles.textMedium : undefined,
+        variant === 'textBold' ? styles.textBold : undefined,
         variant === 'title' ? styles.title : undefined,
-        variant === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
-        variant === 'subtitle' ? styles.subtitle : undefined,
+        variant === 'link' ? styles.link : undefined,
         style,
       ]}
       {...rest}
@@ -25,22 +26,29 @@ export function Text({
 }
 
 const styles = StyleSheet.create({
-  default: {
+  textDefault: {
     fontSize: 12,
     lineHeight: 18,
   },
-  defaultSemiBold: {
+  textMedium: {
     fontSize: 14,
     lineHeight: 20,
     fontWeight: '500',
+  },
+  textBold: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    lineHeight: 24,
   },
   title: {
     fontSize: 20,
     fontWeight: '700',
     lineHeight: 28,
   },
-  subtitle: {
-    fontSize: 16,
-    fontWeight: 'bold',
+  link: {
+    fontSize: 14,
+    lineHeight: 20,
+    fontWeight: '500',
+    color: '#2D69FA'
   },
 });

@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
-import { Text } from "@/src/components/ui/Text";
-import { Container } from "@/src/components/ui/Container";
+import { Text } from "@/src/components/Text";
+import { Container } from "@/src/components/Container";
 
 export default function Profile() {
   return (

@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
-import { Text } from "@/src/components/ui/Text";
-import { Button } from "@/src/components/ui/Button";
-import { Container } from "@/src/components/ui/Container";
+import { Text } from "@/src/components/Text";
+import { Button } from "@/src/components/Button";
+import { Container } from "@/src/components/Container";
 
 export default function Request() {
   const { push } = useRouter()

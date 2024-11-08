@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Tabs } from "expo-router";
 import { useFonts } from "expo-font";
 import * as SplashScreen from 'expo-splash-screen';
-import { TabBarIcon } from "@/src/components/navigation/TabBarIcon";
+import { TabBarIcon } from "@/src/components/TabBarIcon";
 import 'react-native-reanimated';
 
 SplashScreen.preventAutoHideAsync();

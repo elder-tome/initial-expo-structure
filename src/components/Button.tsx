@@ -15,13 +15,13 @@ export function Button({ style, children, iconName, ...rest }: ButtonProps) {
       {...rest}
     >
       { iconName && <Feather name={iconName} size={14} style={styles.icon} />}
-      <Text style={styles.text} variant='defaultSemiBold'>{children}</Text>
+      <Text style={styles.text} variant='textMedium'>{children}</Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
-  button: {
+  button: { 
     width: '100%',
     padding: 8,
     backgroundColor: '#2D69FA',

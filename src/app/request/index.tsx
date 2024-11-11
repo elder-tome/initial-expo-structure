@@ -32,7 +32,7 @@ export default function Request() {
         style={styles.button}
         onPress={handleClickButtom}
       >
-        Fazer Solicitação
+        Revisar pedido
       </Button>
     </Container>
   );

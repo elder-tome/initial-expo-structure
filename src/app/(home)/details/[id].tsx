@@ -4,7 +4,7 @@ import { Text } from "@/src/components/Text";
 import { Container } from "@/src/components/Container";
 
 export default function Details() {
-  const { id } = useLocalSearchParams()
+  const { id } = useLocalSearchParams();
   return (
     <Container>
       <View style={styles.container}>
@@ -13,7 +13,7 @@ export default function Details() {
       </View>
     </Container>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

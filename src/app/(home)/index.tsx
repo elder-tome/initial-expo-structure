@@ -1,9 +1,11 @@
 import { StyleSheet, View } from "react-native";
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { Text } from "@/src/components/Text";
 import { Container } from "@/src/components/Container";
+import { Button } from "@/src/components/Button";
 
 export default function Home() {
+  const { navigate  } = useRouter();
   return (
     <Container>
       <View style={styles.container}>
@@ -18,6 +20,9 @@ export default function Home() {
           <Text variant="link">15fcfcd0-8cf5-436b-a635-7c38b4b0b5ee</Text>
         </Link>
       </View>
+      <Button iconName="check-circle" onPress={() => navigate("/request")}>
+        Fazer Solicitação
+      </Button>
     </Container>
   );
 }
